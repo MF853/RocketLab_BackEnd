@@ -6,15 +6,37 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // Enable validation pipe
-  app.useGlobalPipes(new ValidationPipe());
+  // Enable CORS
+  app.enableCors();
+  
+  // Enable validation pipe with proper error messages
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      errorHttpStatusCode: 422,
+    }),
+  );
 
   const config = new DocumentBuilder()
     .setTitle('RocketLab E-commerce API')
     .setDescription('API para gerenciamento de produtos e carrinho de compras')
     .setVersion('1.0')
-    .addTag('products')
-    .addTag('Carrinho')
+    .addTag('auth', 'Authentication endpoints')
+    .addTag('products', 'Product management')
+    .addTag('Carrinho', 'Shopping cart operations')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+        name: 'JWT',
+        description: 'Enter JWT token',
+        in: 'header',
+      },
+      'JWT-auth',
+    )
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

@@ -13,6 +13,17 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("user")
+  cart      Cart?    // One-to-one relationship
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model Product {
   id          Int      @id @default(autoincrement())
   name        String
@@ -30,6 +41,8 @@ model Cart {
   id        Int        @id @default(autoincrement())
   items     CartItem[]
   total     Float      @default(0)
+  user      User       @relation(fields: [userId], references: [id])
+  userId    Int        @unique  // Make this unique to ensure one-to-one relationship
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
 }
