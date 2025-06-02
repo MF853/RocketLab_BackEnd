@@ -118,4 +118,25 @@ export class CartController {
   getCart(@Param('id', ParseIntPipe) id: number) {
     return this.cartService.getCart(id);
   }
+
+  @Delete(':id')
+  @ApiOperation({ summary: 'Remover um carrinho completo' })
+  @ApiParam({
+    name: 'id',
+    description: 'ID do carrinho',
+    type: 'number',
+    required: true,
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Carrinho removido com sucesso.',
+    type: Cart,
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'Carrinho não encontrado.',
+  })
+  deleteCart(@Param('id', ParseIntPipe) id: number) {
+    return this.cartService.deleteCart(id);
+  }
 }

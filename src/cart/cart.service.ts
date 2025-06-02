@@ -108,6 +108,26 @@ export class CartService {
     return cart;
   }
 
+  async deleteCart(cartId: number) {
+    const cart = await this.prisma.cart.findUnique({
+      where: { id: cartId },
+    });
+
+    if (!cart) {
+      throw new NotFoundException(`Cart with ID ${cartId} not found`);
+    }
+
+    // Delete all cart items first due to foreign key constraints
+    await this.prisma.cartItem.deleteMany({
+      where: { cartId },
+    });
+
+    // Then delete the cart
+    return this.prisma.cart.delete({
+      where: { id: cartId },
+    });
+  }
+
   private async calculateAndUpdateTotal(cartId: number) {
     const cart = await this.prisma.cart.findUnique({
       where: { id: cartId },
