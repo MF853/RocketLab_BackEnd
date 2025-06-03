@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "name": "iPhone 15 Pro Max",
+      "description": "O iPhone mais avançado com chip A17 Pro, câmera principal de 48MP e design em titânio",
+      "category": "eletronicos",
+      "price": 9899.99,
+      "stock": 15,
+      "image": "https://m.media-amazon.com/images/I/51bNCrZFLjL.__AC_SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "name": "Samsung Galaxy Book3 Ultra",
+      "description": "Notebook premium com processador Intel Core i9, RTX 4070 e tela AMOLED de 16 polegadas",
+      "category": "eletronicos",
+      "price": 14999.99,
+      "stock": 8,
+      "image": "https://m.media-amazon.com/images/I/51lGW2nP9qL._AC_UL320_.jpg"
+    },
+    {
+      "name": "JBL Tune 770NC",
+      "description": "Fone de ouvido bluetooth com cancelamento de ruído ativo e até 70 horas de bateria",
+      "category": "perifericos",
+      "price": 899.99,
+      "stock": 25,
+      "image": "https://m.media-amazon.com/images/I/61KmeiNKw3L._AC_UL320_.jpg"
+    },
+    {
+      "name": "Apple Watch Series 10",
+      "description": "Smartwatch com chip S10, tela Always-On Retina e monitoramento avançado de saúde",
+      "category": "eletronicos",
+      "price": 4999.99,
+      "stock": 12,
+      "image": "https://m.media-amazon.com/images/I/51T4d+l0-PL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Samsung Galaxy Tab S9 Ultra",
+      "description": "Tablet premium com tela AMOLED de 14.6\", S Pen incluída e processador Snapdragon 8 Gen 2",
+      "category": "eletronicos",
+      "price": 9999.99,
+      "stock": 10,
+      "image": "https://m.media-amazon.com/images/I/419MPd2DijL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Canon EOS R6 Mark II",
+      "description": "Câmera mirrorless profissional com gravação 4K 60fps e 40fps em fotos",
+      "category": "eletronicos",
+      "price": 15999.99,
+      "stock": 6,
+      "image": "https://m.media-amazon.com/images/I/71WvBLJvqGL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Samsung Odyssey OLED G9",
+      "description": "Monitor gamer curvo 49\" com taxa de 240Hz e tempo de resposta de 0.03ms",
+      "category": "perifericos",
+      "price": 12999.99,
+      "stock": 15,
+      "image": "https://m.media-amazon.com/images/I/81x-2JD6s7L._AC_UL320_.jpg"
+    },
+    {
+      "name": "Logitech G Pro X Superlight",
+      "description": "Mouse gamer sem fio ultraleve com sensor HERO 25K e menos de 63g",
+      "category": "perifericos",
+      "price": 899.99,
+      "stock": 30,
+      "image": "https://m.media-amazon.com/images/I/61WRvXLabPL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Razer BlackWidow V4 Pro",
+      "description": "Teclado mecânico gamer com switches Razer Green, RGB por tecla e apoio de pulso",
+      "category": "perifericos",
+      "price": 1499.99,
+      "stock": 20,
+      "image": "https://m.media-amazon.com/images/I/81EEknaRvIL._AC_UL320_.jpg"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "description": "Placa de vídeo topo de linha com 24GB GDDR6X, Ray Tracing e DLSS 3.0 para gaming em 4K",
+      "category": "componentes",
+      "price": 12999.99,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/71RgD3MP-hL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Samsung Galaxy Watch 6 Classic",
+      "description": "Smartwatch com moldura giratória, monitoramento de saúde avançado e WearOS",
+      "category": "eletronicos",
+      "price": 2999.99,
+      "stock": 22,
+      "image": "https://m.media-amazon.com/images/I/31hOC8BURbL._AC_UL320_.jpg"
+    },
+    {
+      "name": "Samsung 990 PRO SSD 2TB",
+      "description": "SSD NVMe com velocidades de até 7450MB/s para leitura e 6900MB/s para gravação",
+      "category": "componentes",
+      "price": 1799.99,
+      "stock": 25,
+      "image": "https://m.media-amazon.com/images/I/71OWtcxKgvL._AC_UL320_.jpg"
+    }
+  ]
+} 

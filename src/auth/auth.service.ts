@@ -63,4 +63,28 @@ export class AuthService {
     const { password: _, ...result } = user;
     return result;
   }
+
+  async registerAdmin(email: string, password: string, name: string) {
+    const existingUser = await this.prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (existingUser) {
+      throw new UnauthorizedException('Email already registered');
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const user = await this.prisma.user.create({
+      data: {
+        email,
+        password: hashedPassword,
+        name,
+        role: Role.ADMIN,
+      },
+    });
+
+    const { password: _, ...result } = user;
+    return result;
+  }
 } 

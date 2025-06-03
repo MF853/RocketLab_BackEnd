@@ -21,11 +21,20 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('RocketLab E-commerce API')
-    .setDescription('API para gerenciamento de produtos e carrinho de compras')
+    .setDescription(`
+API para gerenciamento de e-commerce com autenticação, produtos e carrinho de compras.
+
+Principais recursos:
+- Autenticação com JWT
+- Gerenciamento de produtos
+- Carrinho de compras
+- Controle de estoque
+- Diferentes níveis de acesso (Admin/User)
+    `)
     .setVersion('1.0')
-    .addTag('auth', 'Authentication endpoints')
-    .addTag('products', 'Product management')
-    .addTag('Carrinho', 'Shopping cart operations')
+    .addTag('Auth', 'Autenticação e gerenciamento de usuários')
+    .addTag('Produtos', 'Gerenciamento de produtos')
+    .addTag('Carrinho', 'Operações do carrinho de compras')
     .addBearerAuth(
       {
         type: 'http',
