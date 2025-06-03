@@ -20,7 +20,7 @@ API de e-commerce desenvolvida com NestJS, Prisma e PostgreSQL. Oferece funciona
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/RocketLab_BackEnd.git
+git clone https://github.com/MF853/RocketLab_BackEnd.git
 cd RocketLab_BackEnd
 ```
 
