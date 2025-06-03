@@ -1,6 +1,6 @@
 # RocketLab E-commerce API
 
-API de e-commerce desenvolvida com NestJS, Prisma e PostgreSQL. Oferece funcionalidades de autenticação, gerenciamento de produtos e carrinho de compras.
+API de e-commerce desenvolvida com NestJS, Prisma e SQLite. Oferece funcionalidades de autenticação, gerenciamento de produtos e carrinho de compras.
 
 ## Principais Recursos
 
@@ -13,7 +13,7 @@ API de e-commerce desenvolvida com NestJS, Prisma e PostgreSQL. Oferece funciona
 ## Pré-requisitos
 
 - Node.js (v18 ou superior)
-- PostgreSQL
+- SQLite
 - NPM ou Yarn
 
 ## Instalação
@@ -29,20 +29,14 @@ cd RocketLab_BackEnd
 npm install
 ```
 
-3. Configure as variáveis de ambiente:
-   - Copie o arquivo `.env.example` para `.env`
-   - Preencha as variáveis com suas configurações
+3. Configuração:
 
-```bash
-cp .env.example .env
-```
+O projeto usa as seguintes variáveis de ambiente:
 
-Exemplo de `.env`:
-```env
-DATABASE_URL="postgresql://user:password@localhost:5432/rocketlab?schema=public"
-JWT_SECRET="sua-chave-secreta"
-PORT=3000
-```
+- `DATABASE_URL`: URL de conexão com o SQLite
+- `JWT_SECRET`: Chave para assinatura dos tokens JWT
+- `PORT`: Porta do servidor (opcional, padrão: 3000)
+
 
 ## Banco de Dados
 
